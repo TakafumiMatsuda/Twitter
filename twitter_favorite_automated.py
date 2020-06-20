@@ -2,6 +2,7 @@ import tweepy
 from config import config
 # coding: UTF-8
 
+
 def favorite_automated(words, favs):
 
     # API key
