@@ -1,0 +1,1 @@
+web: python3 batch_task_fav.py
