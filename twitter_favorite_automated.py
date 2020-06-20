@@ -1,15 +1,24 @@
 import tweepy
-from config import config
+import os
+# from config import config
 # coding: UTF-8
 
 
 def favorite_automated(words, favs):
 
     # API key
-    CONSUMER_KEY = config.CONSUMER_KEY
-    CONSUMER_SECRET = config.CONSUMER_SECRET
-    ACCESS_TOKEN = config.ACCESS_TOKEN
-    ACCESS_SECRET = config.ACCESS_SECRET
+    # ローカルで動かす時
+    # CONSUMER_KEY = config.CONSUMER_KEY
+    # CONSUMER_SECRET = config.CONSUMER_SECRET
+    # ACCESS_TOKEN = config.ACCESS_TOKEN
+    # ACCESS_SECRET = config.ACCESS_SECRET
+
+    #herokuで動かすとき
+    CONSUMER_KEY = os.environ["CONSUMER_KEY"]
+    CONSUMER_SECRET = os.environ["CONSUMER_SECRET"]
+    ACCESS_TOKEN = os.environ["ACCESS_TOKEN_KEY"]
+    ACCESS_SECRET = os.environ["ACCESS_TOKEN_SECRET"]
+
     # インスタンス生成
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
     auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
