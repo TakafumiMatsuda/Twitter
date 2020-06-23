@@ -25,7 +25,7 @@ def favorite_automated(words, favs):
     api = tweepy.API(auth)
     
     for word in words:
-        word = word+' -bot'+' -相互フォロー'+' -セフレ'+' -セックス'+' -オフパコ'+' exclude:retweets'
+        word = word+' -bot'+' -相互フォロー'+' -セフレ'+' -セックス'+' -オフパコ'+' -美少女'+' -おっぱ'+' exclude:retweets'
         #word = word + '-bot -オフパコ -相互フォロー -セフレ' + ' exclude:retweets' + ' min_faves:100'
         print(word)
         search_results = api.search(q=word, count=favs)
